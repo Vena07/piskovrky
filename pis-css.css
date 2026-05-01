@@ -1,53 +1,73 @@
 body {
     background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-/* menu */
+#piškovrky {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* --- MENU --- */
 #menu {
     display: block;
+    text-align: center;
+    padding: 1rem;
+}
+
+.nadpis {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .select {
     border: solid black 5px;
     background-color: #c0c0c0;
     border-radius: 20px;
-    margin: 10px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 500px;
+}
+
+.napis {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .moznosti {
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
-.moznost {
-    margin: 5px; /* Úprava okrajů */
+.moznost, .moznost1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .moznost1 { 
-    width: 120px; /* Další zmenšení */
-    height: 120px; /* Další zmenšení */
+    width: 120px;
+    height: 120px;
     border-radius: 20px;
-    font-size: 35px; /* Další zmenšení */
+    font-size: 1.8rem;
     border: solid black 5px;
+    background-color: #ebebeb;
     transition: all 0.2s ease;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.napis {
-    display: flex;
-    justify-content: center;
-    font-size: 30px; /* Další zmenšení */
-    margin: -20px; /* Úpravy okrajů */
-}
-
-.nadpis {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 50px; /* Další zmenšení */
-    align-items: baseline;
-    margin: -30px; /* Úpravy okrajů */
+#pvpmode {
+    background-color: #3a6ea5;
 }
 
 .playt {
@@ -57,149 +77,64 @@ body {
 
 .play {
     font-family: cursive;
-    font-size: 30px; /* Další zmenšení */
-    display: flex;
+    font-size: 1.8rem;
     background-color: #ffffff;
     border: solid 5px;
     border-radius: 20px;
-    margin: 5px; /* Úpravy okrajů */
-    justify-content: center;
-    width: 100px; /* Další zmenšení */
+    padding: 0.5rem 2rem;
     transition: all 0.2s ease;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.pridat:hover {
+.play:hover, .moznost1:hover, .zpet:hover, .dalsikolo:hover {
     background-color: #3a6ea5;
+    transform: scale(1.05);
 }
 
-.odebrat:hover {
-    background-color: #3a6ea5;
-}
-
-.kontaktt {
-    display: flex;
-    justify-content: end;
-}
-
-.play:hover {
-    transform: scale(1.1);
-}
-
-.kontakt:hover {
-    transform: scale(1.1);
-}
-
-.moznost1:hover {
-    transform: scale(1.1);
-}
-
-#pvpmode {
-    background-color: #3a6ea5;
-}
-
-#pvemode {
-    background-color: #ebebeb;
-}
-
-/* hra */
+/* --- HRA --- */
 #hra {
     display: none;
-    justify-content: space-around;
-    min-width: 100vw;
-    min-height: 100vh;
-}
-
-.tlacitka {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    margin-top: 60px; /* Další zmenšení */
-}
-
-.zpet {
-    width: 80px; /* Další zmenšení */
-    font-size: 15px; /* Další zmenšení */
-}
-
-.zpet:hover {
-    transform: scale(1.1);
-}
-
-.dalsikolo:hover {
-    transform: scale(1.1);
-}
-
-.dalsikolo, .zpet {
-    font-family: cursive;
-    font-size: 15px; /* Další zmenšení */
-    margin: 5px;
-    display: flex;
-    background-color: #ffffff;
-    border: solid black 5px;
-    border-radius: 20px;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-
-.deska {
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    background-color: #d7f9ff;
-    align-items: baseline;
-    width: 375px; /* Další zmenšení */
-    height: 375px; /* Další zmenšení */
-    margin-top: 20px; /* Úpravy okrajů */
-}
-
-.deska .deskahry {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.rada {
-    display: flex;
-}
-
-.pocetkol {
-    display: flex;
-    justify-content: start;
-    font-size: 15px; /* Další zmenšení */
-}
-
-.pole {
-    display: flex;
-    background-color: #ebebeb;
-    width: 125px; /* Další zmenšení */
-    height: 125px; /* Další zmenšení */
-    justify-content: center;
     align-items: center;
-    font-size: 40px; /* Další zmenšení */
-    text-shadow: 1px 1px 0 black; /* Zmenšení stínu textu */
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .bod {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 1rem;
     border: solid black 5px;
     border-radius: 15px;
-    width: 200px; /* Další zmenšení */
-    height: 400px; /* Další zmenšení */
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem;
     background-color: #c0c0c0;
+    order: -1;
+    box-sizing: border-box;
+}
+
+.pocetkol {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
 }
 
 .body {
-    font-size: 15px; /* Další zmenšení */
-    display: flex;
+    font-size: 1.2rem;
     background-color: #ffede1;
     border: solid black 5px;
     border-radius: 20px;
-    margin-top: 10px; /* Úpravy okrajů */
+    padding: 0.5rem 1rem;
+    width: 80%;
+    display: flex;
     justify-content: center;
-    width: 150px; /* Další zmenšení */
+    font-weight: bold;
 }
 
 #bodyO {
@@ -215,417 +150,93 @@ body {
     color: black;
 }
 
-.start {
+.tlacitka {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.dalsikolo, .zpet {
+    font-family: cursive;
+    font-size: 1.2rem;
+    border: solid black 5px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    font-weight: bold;
+}
+
+#playbutton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* --- Herní deska --- */
+.deska {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
 }
 
-.pocet {
-    font-family: cursive;
-    margin: 5px;
+.deskahry {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: black;
+    box-sizing: border-box;
 }
 
-#pocetO, #pocetX {
-    padding-left: 2px;
-    margin-left: 5px;
+.rada {
+    display: flex;
+    flex: 1;
+    gap: 5px;
 }
 
-.napoveda {
-    font-size: 20px; /* Další zmenšení */
-    font-family: cursive;
-    width: 60px; /* Další zmenšení */
+.pole {
+    display: flex;
+    background-color: #ebebeb;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(3rem, 15vw, 6rem);
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s;
 }
 
-.pole, h1, p, button, .kolain {
+.pole:hover {
+    background-color: #ffffff;
+}
+
+.pole, p, button {
     font-family: "Comic Sans MS", cursive, sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    font-weight: 700;
-    text-decoration: none solid rgb(68, 68, 68);
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: none;
-    color: rgb(0, 0, 0);
 }
 
-#pole1 {  
-    border-bottom: solid black 3px; 
-    border-right: solid black 3px;
-    color: white;    
-}
-
-#pole2 {
-    border-right: solid black 3px; 
-    border-bottom: solid black 3px;
-    border-left: solid black 3px;
-    color: white; 
-}
-
-#pole3 {
-    border-bottom: solid black 3px;
-    border-left: solid black 3px;
-    color: white; 
-}
-
-#pole4 {
-    border-bottom: solid black 3px;
-    border-right: solid black 3px; 
-    border-top: solid black 3px;
-    color: white; 
-}
-
-#pole5 {
-    border: solid black 3px;
-    color: white; 
-}
-
-#pole6 {
-    border-top: solid black 3px; 
-    border-bottom: solid black 3px;
-    border-left: solid black 3px;
-    color: white; 
-}
-
-#pole7 {
-    border-right: solid black 3px;
-    border-top: solid black 3px;
-    color: white; 
-}
-
-#pole8 {
-    border-top: solid black 3px; 
-    border-right: solid black 3px;
-    border-left: solid black 3px;
-    color: white; 
-}
-
-#pole9 {
-    border-top: solid black 3px; 
-    border-left: solid black 3px;
-    color: white; 
-}
-
-#playbutton:disabled{
-    opacity: 0.5;
-}
-
-@media (min-width: 1128px) and (min-height: 615px) {
-    body {
-        background-color: #ebebeb;
-    }
-    
-    /* menu */
-    #menu {
-        display: block;
-    }
-    
-    .select {
-        border: solid black 5px;
-        background-color: #c0c0c0;
-        border-radius: 20px;
-    }
-    
-    .moznosti {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .moznost {
-        margin: 10px;
-    }
-    
-    .moznost1 { 
-        width: 200px;
-        height: 200px;
-        border-radius: 20px;
-        font-size: 75px;
-        border: solid black 5px;
-        transition: all 0.2s ease;
-    }
-    
-    .napis {
-        display: flex;
-        justify-content: center;
-        font-size: 60px;
-        margin: -50px;
-    }
-    
-    .nadpis {
-        margin-top: 1px;
-        margin-bottom: 2px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 90px;
-        align-items: baseline;
-        margin: -60px;
-    }
-    
-    .playt {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .play {
-        font-family: cursive;
-        font-size: 50px;
-        display: flex;
-        background-color: #ffffff;
-        border: solid  5px;
-        border-radius: 20px;
-        margin: 20px;
-        justify-content: center;
-        width: 160px;
-        transition: all 0.2s ease;
-    }
-    
-    .pridat:hover {
-        background-color: #3a6ea5;
-    }
-    
-    .odebrat:hover {
-        background-color: #3a6ea5;
-    }
-    
-    .kontaktt {
-        display: flex;
-        justify-content: end;
-    }
-    
-    .play:hover {
-        transform: scale(1.1);
-    }
-    
-    .kontakt:hover {
-        transform: scale(1.1);
-    }
-    
-    .moznost1:hover {
-        transform: scale(1.1);
-    }
-    
-    #pvpmode {
-        background-color: #3a6ea5;
-    }
-    
-    #pvemode {
-        background-color: #ebebeb;
-    }
-    
-    /* hra */
+/* --- RESPONZIVITA (Tablet a PC) --- */
+@media (min-width: 768px) {
     #hra {
-        display: none;
-        justify-content: space-around;
-        min-width: 100vw;
-        min-height: 100vh;
-    }
-    
-    .tlacitka{
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        margin-top:150px ;
-    }
-    
-    
-    .zpet{
-        width: 125px;
-    }
-    
-    .zpet:hover{
-        transform: scale(1.1);
-    }
-    
-    .dalsikolo:hover{
-        transform: scale(1.1);
-    }
-    
-    .dalsikolo , .zpet{
-        font-family: cursive;
-        font-size: 35px;
-        margin: 5px;
-        display: flex;
-        background-color: #ffffff;
-        border: solid black 5px;
-        border-radius: 20px;
+        flex-direction: row;
         justify-content: center;
-        transition: all 0.2s ease;
+        align-items: flex-start;
+        gap: 3rem;
     }
-    .deska {
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        background-color: #d7f9ff;
-        align-items: baseline;
-        width: 600px;
-        height: 600px;
-        margin-top: 50px;
-    }
-    
-    .deskahry {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .rada {
-        display: flex;
-    }
-    
-    .pocetkol{
-        display: flex;
-        justify-content: start;
-        font-size: 35px;
-    }
-    
-    .pole {
-        display: flex;
-        background-color:#ebebeb ;
-        width: 200px;
-        height: 200px;
-        justify-content: center;
-        align-items: center;
-        font-size: 100px;
-        font: 35px;
-        text-shadow: 2px 2px 0 black, -2px -2px 0 black,2px -2px 0 black,-2px 2px 0 black,2px 0 0 black,-2px 0 0 black,0 2px 0 black,0 -2px 0 black;
-    }
-    
+
     .bod {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: solid black 5px;
-        border-radius: 15px;
-        width: 450px;
-        height:700px ;
-        background-color: #c0c0c0;
+        order: 0;
+        max-width: 300px;
     }
-    
-    .body {
-        font-size: 25px;
-        display: flex;
-        background-color: #ffede1;
-        border: solid black 5px;
-        border-radius: 20px;
-        margin-top:50px;
-        justify-content: center;
-        width: 250px;
-    }
-    
-    #bodyO{
-        background-color: #004e98;
-        color: white;
-    }
-    
-    #bod1, #pocetO{
-        color: white;
-    }
-    
-    #bod2, #pocetX{
-        color: black;
-    }
-    
-    .start {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .pocet {
-        font-family: cursive;
-        margin: 5px;
-    }
-    
-    #pocetO, #pocetX {
-        padding-left: 2px;
-        margin-left: 5px;
-    }
-    
-    .napoveda {
-        font-size: 40px;
-        font-family: cursive;
-        width: 100px;
-    }
-    
-    .pole, h1, p, button, .kolain {
-        font-family: "Comic Sans MS", cursive, sans-serif;
-        letter-spacing: 2px;
-        word-spacing: 2px;
-        font-weight: 700;
-        text-decoration: none solid rgb(68, 68, 68);
-        font-style: normal;
-        font-variant: small-caps;
-        text-transform: none;
-        color: rgb(0, 0, 0);
-    }
-    
-    #pole1 {  
-        border-bottom: solid black 3px; 
-        border-right: solid black 3px;
-        color: white;    
-    }
-    
-    #pole2 {
-        border-right: solid black 3px; 
-        border-bottom: solid black 3px;
-        border-left: solid black 3px;
-        color: white; 
-    }
-    
-    #pole3 {
-        border-bottom: solid black 3px;
-        border-left: solid black 3px;
-        color: white; 
-    }
-    
-    #pole4 {
-        border-bottom: solid black 3px;
-        border-right: solid black 3px; 
-        border-top: solid black 3px;
-        color: white; 
-    }
-    
-    #pole5 {
-        border: solid black 3px;
-        color: white; 
-    }
-    
-    #pole6 {
-        border-top: solid black 3px; 
-        border-bottom: solid black 3px;
-        border-left: solid black 3px;
-        color: white; 
-    }
-    
-    #pole7 {
-        border-right: solid black 3px;
-        border-top: solid black 3px;
-        color: white; 
-    }
-    
-    #pole8 {
-        border-top: solid black 3px; 
-        border-right: solid black 3px;
-        border-left: solid black 3px;
-        color: white; 
-    }
-    
-    #pole9 {
-        border-top: solid black 3px; 
-        border-left: solid black 3px;
-        color: white; 
-    }
-    #playbutton:disabled{
-        opacity: 0.5;
-    }
-
-    
-
-    
 }
-
-
-
-
-
-

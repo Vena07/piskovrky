@@ -104,19 +104,19 @@ function zpet(){
     zvuktlacitko.play()
     if (hrapve === true) {
         bodyX.style.backgroundColor = '#ff6600';
-    bodyO.style.backgroundColor = '#ebebeb';
-    bod1.style.color = 'black';
-    poceO.style.color = 'black';
-    bod2.style.color = 'white';
-    poceX.style.color = 'white';
+        bodyO.style.backgroundColor = '#ebebeb';
+        bod1.style.color = 'black';
+        poceO.style.color = 'black';
+        bod2.style.color = 'white';
+        poceX.style.color = 'white';
     }
     if (hrapvp === true) {
         bodyO.style.backgroundColor = '#004e98';
-    bodyX.style.backgroundColor = '#ebebeb';
-    bod2.style.color = 'black';
-    poceX.style.color = 'black';
-    bod1.style.color = 'white';
-    poceO.style.color = 'white';
+        bodyX.style.backgroundColor = '#ebebeb';
+        bod2.style.color = 'black';
+        poceX.style.color = 'black';
+        bod1.style.color = 'white';
+        poceO.style.color = 'white';
     }
 
 }
